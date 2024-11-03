@@ -36,8 +36,15 @@ local plugins = {
        init = function() vim.g.barbar_auto_setup = false end,
        version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
-    {'akinsho/toggleterm.nvim', version = "*", config = true}
-    
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    -- Mason, LSP and Completion
+    {"williamboman/mason.nvim",},
+    {"williamboman/mason-lspconfig.nvim",},
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'jcha0713/cmp-tw2css'},
 }
 
 return plugins

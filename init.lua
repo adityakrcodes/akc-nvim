@@ -15,3 +15,8 @@ require("akc.plug-opts.nvimtree")
 require("akc.plug-opts.lualine")
 require("akc.plug-opts.barbar")
 require("akc.plug-opts.toggleterm")
+
+-- LSP and Completion
+require("akc.core.lsp")
+require("akc.core.cmp")
+

@@ -9,6 +9,20 @@ local plugins = {
     {'m4xshen/autoclose.nvim'},
     {'nvim-lualine/lualine.nvim',
         dependencies = {'nvim-tree/nvim-web-devicons'},
+    },
+    {
+        'kdheepak/lazygit.nvim',
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+        },
     }
 }
 

@@ -19,3 +19,7 @@ Create a symbolic link of the git nvim config to your .config in the ~/.config/n
 ```sh
 ln -s $HOME/repos/my-linux/config/nvim $HOME/.config/nvim
 ```
+
+To Do:
+- [ ] Add support for TypeScript
+

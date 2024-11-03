@@ -5,6 +5,7 @@ local plugins = {
         dependencies = {'kyazdani42/nvim-web-devicons'},
     },
     {'ayu-theme/ayu-vim', as = 'ayu'},
+    {'wakatime/vim-wakatime', lazy=false},
 }
 
 return plugins

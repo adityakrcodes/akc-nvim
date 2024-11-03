@@ -28,3 +28,7 @@ map.set('n', '<A-Tab>', '<cmd> BufferNext <cr>')
 map.set('n', '<A-S-Tab>', '<cmd> BufferPrevious <cr>')
 map.set('n', '<A-S-Right>', '<cmd> BufferMoveNext <cr>')
 map.set('n', '<A-S-Left>', '<cmd> BufferMovePrevious <cr>')
+
+-- Binding to swtich to normal mode in terminal, press <Esc> two times
+vim.cmd(':tnoremap <Esc><Esc> <C-\\><C-n>')
+

@@ -4,3 +4,7 @@ require("akc.lazy.config")
 -- Option for vim
 require("akc.core.options")
 require("akc.core.appearance")
+
+
+-- Load the plugins configuration
+require("akc.plug-opts.nvimtree")

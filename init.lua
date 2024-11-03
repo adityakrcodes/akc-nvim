@@ -12,3 +12,4 @@ require("akc.plug-opts.opts")
 
 -- Plugins with their configurations
 require("akc.plug-opts.nvimtree")
+require("akc.plug-opts.lualine")

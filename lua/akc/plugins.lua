@@ -6,7 +6,10 @@ local plugins = {
     },
     {'ayu-theme/ayu-vim', as = 'ayu'},
     {'wakatime/vim-wakatime', lazy=false},
-    {'m4xshen/autoclose.nvim'},    
+    {'m4xshen/autoclose.nvim'},
+    {'nvim-lualine/lualine.nvim',
+        dependencies = {'nvim-tree/nvim-web-devicons'},
+    }
 }
 
 return plugins

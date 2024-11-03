@@ -7,5 +7,8 @@ require("akc.core.appearance")
 require("akc.core.remap")
 
 
--- Load the plugins configuration
+-- Contains config of plugins with default options
+require("akc.plug-opts.opts")
+
+-- Plugins with their configurations
 require("akc.plug-opts.nvimtree")

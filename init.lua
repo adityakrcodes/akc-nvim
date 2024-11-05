@@ -1,19 +1,22 @@
--- Plugin File
-require('akc.plugins')
+-- Loading the Lazy Package Manager
+require("akc.lazy.config")
 
--- Core configs
-require('akc.core.options')
-require('akc.core.remap')
-require('akc.core.appearance')
-require('akc.core.code-runner')
-require('akc.core.lsp')
-require('akc.core.cmp')
+-- Option for vim
+require("akc.core.options")
+require("akc.core.appearance")
+require("akc.core.remap")
 
--- Plugins Configurations
-require('akc.conf.nvimtree')
-require('akc.conf.presence')
-require('akc.conf.lualine')
-require('akc.conf.treesitter')
-require('akc.conf.auto-close')
-require('akc.conf.toggleterm')
-require('akc.conf.barbar')
+
+-- Contains config of plugins with default options
+require("akc.plug-opts.opts")
+
+-- Plugins with their configurations
+require("akc.plug-opts.nvimtree")
+require("akc.plug-opts.lualine")
+require("akc.plug-opts.barbar")
+require("akc.plug-opts.toggleterm")
+
+-- LSP and Completion
+require("akc.core.lsp")
+require("akc.core.cmp")
+

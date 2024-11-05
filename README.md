@@ -20,15 +20,10 @@ Create a symbolic link of the git nvim config to your .config in the ~/.config/n
 ln -s $HOME/repos/my-linux/config/nvim $HOME/.config/nvim
 ```
 
-### Migrated from Packer to Lazy.nvim ✅
-
-## TO-DOs
-
-- [x] Install Plugins
-    - [x] m4xshen/autoclose.nvim
-    - [ ] mistricky/codesnap.nvim - Will do it later
-    - [x] numToStr/Comment.nvim
-    - [x] nvim-treesitter/nvim-treesitter
-    - [x] a good theme (Installed AYU)
-    - [x] akinsho/nvim-toggleterm.lua
-- [ ] Configure LSP
+To Do:
+- [x] Make the basic setup for nvim
+- [x] Add support LSP and Code completion
+- [x] Add Tabs
+- [x] Make the basic terminal setup
+- [ ] Add support for TypeScript
+- [ ] Rice it up!!!

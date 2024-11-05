@@ -2,6 +2,7 @@ local opt = vim.opt
 
 -- Setting line numbers
 opt.number = true
+opt.relativenumber = true
 
 -- Tabs and Indentation
 opt.tabstop = 4
@@ -24,12 +25,11 @@ opt.background = "dark" -- Make use of DARK mode in color themes
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
-
 -- Backspace 
 opt.backspace = "indent,eol,start"
 
 -- Clipboard
-opt.clipboard:append("unnamedplus") -- have to look into this
+opt.clipboard:append("unnamedplus,unnamed") -- have to look into this
 
 -- Splitting windows
 opt.splitright = true
@@ -40,5 +40,5 @@ opt.iskeyword:append('-')
 opt.scrolloff = 8
 
 -- disables netrw completely
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1

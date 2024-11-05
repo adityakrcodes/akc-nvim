@@ -1,10 +1,18 @@
+
 local cmp = require('cmp')
 
 cmp.setup({
     sources = {
-        {name = 'nvim_lsp'},
+        { name = 'nvim_lsp'},
+        { name = 'cmp-tw2css'}
+    },
+    snippet = {
+        expand = function(args)
+            vim.snippet.expand(args.body)
+        end,
     },
     mapping = {
+        ['<C-Space>'] = cmp.mapping.complete(),
         ['<Enter>'] = cmp.mapping.confirm({select = false}),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<Shift-Tab>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
@@ -25,3 +33,4 @@ cmp.setup({
         end),
     },
 })
+

@@ -1,89 +1,50 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
 local plugins = {
-	{
-        'nvim-tree/nvim-tree.lua',
-        dependencies = { 'kyazdani42/nvim-web-devicons' }
-    },
+    {'andweeb/presence.nvim'},
     {'github/copilot.vim', lazy=false},
-    {'wakatime/vim-wakatime', lazy=false},
-    {'andweeb/presence.nvim', lazy=false},
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-    {
-        "kdheepak/lazygit.nvim",
-    	cmd = {
-    		"LazyGit",
-    		"LazyGitConfig",
-    		"LazyGitCurrentFile",
-    		"LazyGitFilter",
-    		"LazyGitFilterCurrentFile",
-    	},
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-    },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-    {
-        'Pocco81/auto-save.nvim',
-        config = function()
-            require('auto-save').setup{
-                -- config here
-            }
-        end,
+    {'nvim-tree/nvim-tree.lua',
+        dependencies = {'kyazdani42/nvim-web-devicons'},
     },
     {'ayu-theme/ayu-vim', as = 'ayu'},
-    {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+    {'wakatime/vim-wakatime', lazy=false},
     {'m4xshen/autoclose.nvim'},
-    {'akinsho/toggleterm.nvim', version = "*", config = true},
-    {'numToStr/Comment.nvim',
-        opts = {
-            mappings = {
-                basic = true,
-            },
-        },
-        lazy = false,
+    {'nvim-lualine/lualine.nvim',
+        dependencies = {'nvim-tree/nvim-web-devicons'},
     },
     {
-    "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
-        end,
-        ft = { "markdown" },
-    },
-    {'romgrk/barbar.nvim',
+        'kdheepak/lazygit.nvim',
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
         dependencies = {
-            'lewis6991/gitsigns.nvim',
-            'nvim-tree/nvim-web-devicons',
+            'nvim-lua/plenary.nvim',
+        },
     },
-        init = function() vim.g.barbar_auto_setup = false end,
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+   },
+   {'romgrk/barbar.nvim',
+       dependencies = {
+           'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+           'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+       },
+       init = function() vim.g.barbar_auto_setup = false end,
+       version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
-    {'williamboman/mason.nvim'},
-    {'williamboman/mason-lspconfig.nvim'},
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    -- Mason, LSP and Completion
+    {"williamboman/mason.nvim",},
+    {"williamboman/mason-lspconfig.nvim",},
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
-
+    {'jcha0713/cmp-tw2css'},
 }
 
-require("lazy").setup(plugins, opts)
+return plugins

@@ -6,4 +6,3 @@ function appearance(theme)
 end
 
 appearance()
-

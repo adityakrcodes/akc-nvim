@@ -45,6 +45,7 @@ local plugins = {
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
     {'jcha0713/cmp-tw2css'},
+    {'norcalli/nvim-colorizer.lua'},
 }
 
 return plugins

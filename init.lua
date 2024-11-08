@@ -16,6 +16,7 @@ require("akc.plug-opts.lualine")
 require("akc.plug-opts.barbar")
 require("akc.plug-opts.toggleterm")
 require("akc.plug-opts.treesitter")
+require("akc.plug-opts.autotag")
 
 -- LSP and Completion
 require("akc.core.lsp")

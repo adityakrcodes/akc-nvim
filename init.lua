@@ -22,3 +22,5 @@ require("akc.plug-opts.autotag")
 require("akc.core.lsp")
 require("akc.core.cmp")
 
+-- Code Runner
+require("akc.core.code_runner")

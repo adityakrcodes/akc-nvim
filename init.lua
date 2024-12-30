@@ -6,7 +6,6 @@ require("akc.core.options")
 require("akc.core.appearance")
 require("akc.core.remap")
 
-
 -- Contains config of plugins with default options
 require("akc.plug-opts.opts")
 
@@ -17,6 +16,7 @@ require("akc.plug-opts.barbar")
 require("akc.plug-opts.toggleterm")
 require("akc.plug-opts.treesitter")
 require("akc.plug-opts.autotag")
+require("akc.plug-opts.auto_save")
 
 -- LSP and Completion
 require("akc.core.lsp")
@@ -24,3 +24,4 @@ require("akc.core.cmp")
 
 -- Code Runner
 require("akc.core.code_runner")
+

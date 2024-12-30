@@ -48,6 +48,7 @@ local plugins = {
     {'norcalli/nvim-colorizer.lua'},
     {'nvim-treesitter/nvim-treesitter'},
     {'windwp/nvim-ts-autotag'},
+    {'Pocco81/auto-save.nvim'},
 }
 
 return plugins

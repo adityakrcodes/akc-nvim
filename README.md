@@ -19,11 +19,3 @@ Create a symbolic link of the git nvim config to your .config in the ~/.config/n
 ```sh
 ln -s $HOME/repos/my-linux/config/nvim $HOME/.config/nvim
 ```
-
-To Do:
-- [x] Make the basic setup for nvim
-- [x] Add support LSP and Code completion
-- [x] Add Tabs
-- [x] Make the basic terminal setup
-- [ ] Add support for TypeScript
-- [ ] Rice it up!!!

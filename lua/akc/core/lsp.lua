@@ -9,8 +9,6 @@ require('mason-lspconfig').setup({
         'html',
         'jsonls',
         'eslint',
-        'marksman',
-        'pyright',
         'ts_ls',
         'lua_ls',
         'rust_analyzer',

@@ -1,4 +1,9 @@
-## MY NVIM configuration
+## MY NVIM configuration - v4.0.0
+
+This rewrite of the config is focused on building the config using lazyvim setup. 
+
+MAIN FOCUS
+development > config
 
 To install
 

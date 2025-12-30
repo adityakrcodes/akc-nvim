@@ -1,9 +1,4 @@
-## MY NVIM configuration - v4.0.0
-
-This rewrite of the config is focused on building the config using lazyvim setup. 
-
-MAIN FOCUS
-development > config
+## AKC nvim rebord
 
 To install
 
